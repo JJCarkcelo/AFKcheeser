@@ -1,8 +1,8 @@
 {
-    "name": "Input Actions",
+    "name": "PlayerInputs",
     "maps": [
         {
-            "name": "Unequipped",
+            "name": "Player",
             "id": "ed2bf30b-2504-432d-a1bb-bb75e9f34cc4",
             "actions": [
                 {
@@ -10,6 +10,15 @@
                     "type": "Value",
                     "id": "64306cb2-efa4-4024-b6e4-55449041ebd0",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "ee104143-86c6-45c3-8900-ce6eabc80447",
+                    "expectedControlType": "Delta",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -203,6 +212,17 @@
                     "action": "Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3bd8c2e5-0544-4c59-9e35-20220f6e2f2e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -215,6 +235,15 @@
                     "type": "Value",
                     "id": "d6a4964d-014c-4f73-b0e8-17ebcf5ebbe2",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "a2593462-8642-45af-8892-8e0d41d9c0fb",
+                    "expectedControlType": "Delta",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -417,6 +446,17 @@
                     "action": "HeavyAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d580da59-521e-4e32-ac57-942499687b1e",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -429,6 +469,15 @@
                     "type": "Value",
                     "id": "6cdb476f-819b-4717-a7a0-3fcebe3cdfbe",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "4cfffce4-1a27-4d41-9da2-17310445bd4b",
+                    "expectedControlType": "Delta",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -649,6 +698,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ADS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06d0cd2e-2178-4efb-8e56-906bfa61242a",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

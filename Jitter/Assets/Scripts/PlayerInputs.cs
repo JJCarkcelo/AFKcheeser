@@ -24,7 +24,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     ""name"": ""PlayerInputs"",
     ""maps"": [
         {
-            ""name"": ""Unequipped"",
+            ""name"": ""Player"",
             ""id"": ""ed2bf30b-2504-432d-a1bb-bb75e9f34cc4"",
             ""actions"": [
                 {
@@ -32,6 +32,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""64306cb2-efa4-4024-b6e4-55449041ebd0"",
                     ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""ee104143-86c6-45c3-8900-ce6eabc80447"",
+                    ""expectedControlType"": ""Delta"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -225,6 +234,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Punch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3bd8c2e5-0544-4c59-9e35-20220f6e2f2e"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -237,6 +257,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""d6a4964d-014c-4f73-b0e8-17ebcf5ebbe2"",
                     ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""a2593462-8642-45af-8892-8e0d41d9c0fb"",
+                    ""expectedControlType"": ""Delta"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -439,6 +468,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""HeavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d580da59-521e-4e32-ac57-942499687b1e"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -451,6 +491,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""type"": ""Value"",
                     ""id"": ""6cdb476f-819b-4717-a7a0-3fcebe3cdfbe"",
                     ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Look"",
+                    ""type"": ""Value"",
+                    ""id"": ""4cfffce4-1a27-4d41-9da2-17310445bd4b"",
+                    ""expectedControlType"": ""Delta"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -673,23 +722,36 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""ADS"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06d0cd2e-2178-4efb-8e56-906bfa61242a"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Unequipped
-        m_Unequipped = asset.FindActionMap("Unequipped", throwIfNotFound: true);
-        m_Unequipped_Move = m_Unequipped.FindAction("Move", throwIfNotFound: true);
-        m_Unequipped_Jump = m_Unequipped.FindAction("Jump", throwIfNotFound: true);
-        m_Unequipped_Run = m_Unequipped.FindAction("Run", throwIfNotFound: true);
-        m_Unequipped_CrouchSlide = m_Unequipped.FindAction("CrouchSlide", throwIfNotFound: true);
-        m_Unequipped_Focus = m_Unequipped.FindAction("Focus", throwIfNotFound: true);
-        m_Unequipped_Punch = m_Unequipped.FindAction("Punch", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
+        m_Player_CrouchSlide = m_Player.FindAction("CrouchSlide", throwIfNotFound: true);
+        m_Player_Focus = m_Player.FindAction("Focus", throwIfNotFound: true);
+        m_Player_Punch = m_Player.FindAction("Punch", throwIfNotFound: true);
         // Knife
         m_Knife = asset.FindActionMap("Knife", throwIfNotFound: true);
         m_Knife_Move = m_Knife.FindAction("Move", throwIfNotFound: true);
+        m_Knife_Look = m_Knife.FindAction("Look", throwIfNotFound: true);
         m_Knife_Jump = m_Knife.FindAction("Jump", throwIfNotFound: true);
         m_Knife_Run = m_Knife.FindAction("Run", throwIfNotFound: true);
         m_Knife_CrouchSlide = m_Knife.FindAction("CrouchSlide", throwIfNotFound: true);
@@ -699,6 +761,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         // Rifle
         m_Rifle = asset.FindActionMap("Rifle", throwIfNotFound: true);
         m_Rifle_Move = m_Rifle.FindAction("Move", throwIfNotFound: true);
+        m_Rifle_Look = m_Rifle.FindAction("Look", throwIfNotFound: true);
         m_Rifle_Jump = m_Rifle.FindAction("Jump", throwIfNotFound: true);
         m_Rifle_Run = m_Rifle.FindAction("Run", throwIfNotFound: true);
         m_Rifle_CrouchSlide = m_Rifle.FindAction("CrouchSlide", throwIfNotFound: true);
@@ -764,37 +827,42 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Unequipped
-    private readonly InputActionMap m_Unequipped;
-    private List<IUnequippedActions> m_UnequippedActionsCallbackInterfaces = new List<IUnequippedActions>();
-    private readonly InputAction m_Unequipped_Move;
-    private readonly InputAction m_Unequipped_Jump;
-    private readonly InputAction m_Unequipped_Run;
-    private readonly InputAction m_Unequipped_CrouchSlide;
-    private readonly InputAction m_Unequipped_Focus;
-    private readonly InputAction m_Unequipped_Punch;
-    public struct UnequippedActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Look;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Run;
+    private readonly InputAction m_Player_CrouchSlide;
+    private readonly InputAction m_Player_Focus;
+    private readonly InputAction m_Player_Punch;
+    public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
-        public UnequippedActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Unequipped_Move;
-        public InputAction @Jump => m_Wrapper.m_Unequipped_Jump;
-        public InputAction @Run => m_Wrapper.m_Unequipped_Run;
-        public InputAction @CrouchSlide => m_Wrapper.m_Unequipped_CrouchSlide;
-        public InputAction @Focus => m_Wrapper.m_Unequipped_Focus;
-        public InputAction @Punch => m_Wrapper.m_Unequipped_Punch;
-        public InputActionMap Get() { return m_Wrapper.m_Unequipped; }
+        public PlayerActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Look => m_Wrapper.m_Player_Look;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
+        public InputAction @CrouchSlide => m_Wrapper.m_Player_CrouchSlide;
+        public InputAction @Focus => m_Wrapper.m_Player_Focus;
+        public InputAction @Punch => m_Wrapper.m_Player_Punch;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(UnequippedActions set) { return set.Get(); }
-        public void AddCallbacks(IUnequippedActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void AddCallbacks(IPlayerActions instance)
         {
-            if (instance == null || m_Wrapper.m_UnequippedActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_UnequippedActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -812,11 +880,14 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Punch.canceled += instance.OnPunch;
         }
 
-        private void UnregisterCallbacks(IUnequippedActions instance)
+        private void UnregisterCallbacks(IPlayerActions instance)
         {
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -834,26 +905,27 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Punch.canceled -= instance.OnPunch;
         }
 
-        public void RemoveCallbacks(IUnequippedActions instance)
+        public void RemoveCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_UnequippedActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IUnequippedActions instance)
+        public void SetCallbacks(IPlayerActions instance)
         {
-            foreach (var item in m_Wrapper.m_UnequippedActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_UnequippedActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public UnequippedActions @Unequipped => new UnequippedActions(this);
+    public PlayerActions @Player => new PlayerActions(this);
 
     // Knife
     private readonly InputActionMap m_Knife;
     private List<IKnifeActions> m_KnifeActionsCallbackInterfaces = new List<IKnifeActions>();
     private readonly InputAction m_Knife_Move;
+    private readonly InputAction m_Knife_Look;
     private readonly InputAction m_Knife_Jump;
     private readonly InputAction m_Knife_Run;
     private readonly InputAction m_Knife_CrouchSlide;
@@ -865,6 +937,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         private @PlayerInputs m_Wrapper;
         public KnifeActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Knife_Move;
+        public InputAction @Look => m_Wrapper.m_Knife_Look;
         public InputAction @Jump => m_Wrapper.m_Knife_Jump;
         public InputAction @Run => m_Wrapper.m_Knife_Run;
         public InputAction @CrouchSlide => m_Wrapper.m_Knife_CrouchSlide;
@@ -883,6 +956,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -908,6 +984,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -948,6 +1027,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Rifle;
     private List<IRifleActions> m_RifleActionsCallbackInterfaces = new List<IRifleActions>();
     private readonly InputAction m_Rifle_Move;
+    private readonly InputAction m_Rifle_Look;
     private readonly InputAction m_Rifle_Jump;
     private readonly InputAction m_Rifle_Run;
     private readonly InputAction m_Rifle_CrouchSlide;
@@ -960,6 +1040,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         private @PlayerInputs m_Wrapper;
         public RifleActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Rifle_Move;
+        public InputAction @Look => m_Wrapper.m_Rifle_Look;
         public InputAction @Jump => m_Wrapper.m_Rifle_Jump;
         public InputAction @Run => m_Wrapper.m_Rifle_Run;
         public InputAction @CrouchSlide => m_Wrapper.m_Rifle_CrouchSlide;
@@ -979,6 +1060,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @Look.started += instance.OnLook;
+            @Look.performed += instance.OnLook;
+            @Look.canceled += instance.OnLook;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
@@ -1007,6 +1091,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @Look.started -= instance.OnLook;
+            @Look.performed -= instance.OnLook;
+            @Look.canceled -= instance.OnLook;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
@@ -1045,9 +1132,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         }
     }
     public RifleActions @Rifle => new RifleActions(this);
-    public interface IUnequippedActions
+    public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnCrouchSlide(InputAction.CallbackContext context);
@@ -1057,6 +1145,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     public interface IKnifeActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnCrouchSlide(InputAction.CallbackContext context);
@@ -1067,6 +1156,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     public interface IRifleActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnLook(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnCrouchSlide(InputAction.CallbackContext context);

@@ -5,58 +5,41 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-    //testing bc pain
-    private bool isGrounded;
-       
-    PlayerInputs playerInputs;
-    public unequippedMap currentMap;
-    
-    InputAction move;
+    private PlayerInputs playerInputs;
+    public CharacterController controller;
+
+    public float moveSpeed = 10f;
+
 
     private void Awake()
     {
-        playerInputs = new InputSystem();
-
+        playerInputs = new PlayerInputs();
     }
-
 
     private void OnEnable()
     {
-        currentMap.Unequipped.Move;
-        playerInputs.
+        playerInputs.Enable();
     }
 
-    public struct unequippedMap
+    private void OnDisable()
     {
-        public InputAction move;
-        public InputAction jump;
-        public InputAction run;
-        public InputAction crouchSlide;
-        public InputAction focus;
-        public InputAction punch;
-        
-    }
-    public struct knifeMap
-    {
-        public InputAction move;
-        public InputAction jump;
-        public InputAction run;
-        public InputAction crouchSlide;
-        public InputAction focus;
-        public InputAction lightAttack;
-        public InputAction heavyAttack;
+        playerInputs.Disable();
     }
 
-    public struct rifleMap
+    public Vector2 GetMove()
     {
-        public InputAction move;
-        public InputAction jump;
-        public InputAction run;
-        public InputAction crouchSlide;
-        public InputAction punch;
-        public InputAction ads;
-        public InputAction shoot;
-        public InputAction reload;
+        return playerInputs.Player.Move.ReadValue<Vector2>();
+
     }
+    public Vector2 GetMouse()
+    {
+        return playerInputs.Player.Look.ReadValue<Vector2>();
+    }
+
+    public bool jumped()
+    {
+        return playerInputs.Player.Jump.triggered;
+    }
+}
 
     
