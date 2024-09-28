@@ -15,6 +15,7 @@ public class TestMoveScript : MonoBehaviour
     public float moveSpeed = 10f;
 
     public string[] item = { "Unequipped", "Knife", "Rifle" };
+    private int currentIndex = 0;
 
     private void Awake()
     {
@@ -34,20 +35,23 @@ public class TestMoveScript : MonoBehaviour
 
     private void GetSwitchMap(InputAction.CallbackContext context)
     {
-        float axisValue = playerInputs.Player.SwitchMap.ReadValue<float>();
-        axisValue = Mathf.Sin(axisValue);
-        
-        Debug.Log("Mousewheel: " + axisValue);
-    }
+        float axisValue = context.ReadValue<float>(); //direct to bind
+        //Debug.Log("Mousewheel: " + axisValue);
+        item[] = currentIndex;
+        currentIndex += (int)(Mathf.Sign(axisValue));
+        if (currentIndex = 0)
+        {
+            Debug.Log(item[currentIndex]);
+        }
+        else if (currentIndex = 1)
+        {
+            Debug.Log(item[currentIndex]);
+        }
+        else if (currentIndex = 2)
+        {
+            Debug.Log(item[currentIndex]);
+        }
 
-    private void SwitchActionMap()
-    {
-        Player.Enable();
-        Player.Disable();
-        Knife.Enable();
-        Knife.Disable();
-        Rifle.Enable();
-        Rifle.Disable();
     }
     
 
