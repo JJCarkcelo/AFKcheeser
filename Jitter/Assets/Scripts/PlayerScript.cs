@@ -6,13 +6,13 @@ using UnityEngine.InputSystem;
 public class PlayerScript : MonoBehaviour
 {
     private PlayerInputs playerInputs;
-    public CharacterController controller;
-
     public float moveSpeed = 10f;
+    public Rigidbody rb;
 
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         playerInputs = new PlayerInputs();
     }
 

@@ -89,6 +89,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Switch Map"",
+                    ""type"": ""Value"",
+                    ""id"": ""d2e970f0-fd8e-4b1a-8757-d520cfcf6037"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -245,6 +254,39 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""29f7e143-c166-42aa-b537-29584f0e6e58"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch Map"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""ac2a5b8f-1558-420f-8038-39469ab5b435"",
+                    ""path"": ""<Mouse>/scroll/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""5c5fa76c-c910-40a2-b1aa-c35350a43f66"",
+                    ""path"": ""<Mouse>/scroll/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Switch Map"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -252,60 +294,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             ""name"": ""Knife"",
             ""id"": ""4f11da79-ac0f-44ba-9157-d4b53a8a5491"",
             ""actions"": [
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""d6a4964d-014c-4f73-b0e8-17ebcf5ebbe2"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""a2593462-8642-45af-8892-8e0d41d9c0fb"",
-                    ""expectedControlType"": ""Delta"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""16600b44-9258-4c38-afe4-4d253259aa80"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Run"",
-                    ""type"": ""Button"",
-                    ""id"": ""9340b746-4d7c-442e-951e-b57c4c42c86b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""CrouchSlide"",
-                    ""type"": ""Button"",
-                    ""id"": ""c6cbbf79-353b-4278-940a-b5f035251662"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Focus"",
-                    ""type"": ""Button"",
-                    ""id"": ""c13cbcc8-05b0-4b98-99ec-336e948c056d"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
                 {
                     ""name"": ""LightAttack"",
                     ""type"": ""Button"",
@@ -326,116 +314,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""c34e5e1a-bf44-449b-bf42-41231557ad48"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""c31eecc2-5680-49db-afce-d7419a1b66ca"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""96f4a505-43ea-4411-81e4-03d0b7e58439"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""a1dd86d1-266b-44c3-b7d4-d425c3ac44ae"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""183cd215-c671-4c55-903e-53c63dedeb20"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7746134e-ec5f-4644-ad00-4404b4cb61fc"",
-                    ""path"": ""<Keyboard>/#(')"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""61eb573e-b3cf-4215-9230-e34e1676f985"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Run"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""41e6a7da-484a-4862-89c7-6a6327e1d828"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CrouchSlide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""77193320-081d-4113-ab4c-31a000c0a1c1"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CrouchSlide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""52f07db5-257d-4305-af53-9bb0a0077fc5"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Focus"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""35019379-0153-4d69-9955-9e951a95327b"",
@@ -468,17 +346,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""HeavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d580da59-521e-4e32-ac57-942499687b1e"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -486,60 +353,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             ""name"": ""Rifle"",
             ""id"": ""86008410-925b-455f-aa5a-8c6cb8b50a1c"",
             ""actions"": [
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""6cdb476f-819b-4717-a7a0-3fcebe3cdfbe"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Look"",
-                    ""type"": ""Value"",
-                    ""id"": ""4cfffce4-1a27-4d41-9da2-17310445bd4b"",
-                    ""expectedControlType"": ""Delta"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Jump"",
-                    ""type"": ""Button"",
-                    ""id"": ""c2e8922b-a192-49c0-85f2-71a2c6662e36"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Run"",
-                    ""type"": ""Button"",
-                    ""id"": ""54ee6add-bdb9-45e1-8952-aaf0c1737873"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""CrouchSlide"",
-                    ""type"": ""Button"",
-                    ""id"": ""c27e97b2-5ae7-4b73-b521-02fb7f52f362"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Punch"",
-                    ""type"": ""Button"",
-                    ""id"": ""e4a47361-79ae-40e5-8596-61e8fb89dcc0"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
                 {
                     ""name"": ""ADS"",
                     ""type"": ""Button"",
@@ -570,61 +383,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""5fb830b6-69f0-4f2f-9ace-9e5331d046d6"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""30ab035f-634b-43bc-b64f-895fd5846d4c"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""a22a5ae3-cc7c-47f6-a6ab-e37fd168e67c"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""01fe65bb-6a8c-4426-94d0-b1bfba3ec980"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""435546ea-a0af-4fde-84d6-1fdfdafd34ee"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""40103d99-3c8d-4a04-ba50-022d889854fe"",
                     ""path"": ""<Keyboard>/r"",
@@ -643,61 +401,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Shoot"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""03445390-f651-45e3-bce8-ab70bd45391b"",
-                    ""path"": ""<Keyboard>/#(')"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""88ceda97-afdc-4f76-a21d-23c6e911c462"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Run"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a1df9885-1337-4dc0-85c1-825c3d44789a"",
-                    ""path"": ""<Keyboard>/c"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CrouchSlide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""42806e13-7232-42b2-aeb0-870ba32afcfa"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CrouchSlide"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fe62c845-2cd6-4c34-993e-09fbcf647fda"",
-                    ""path"": ""<Keyboard>/v"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Punch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -722,17 +425,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""ADS"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""06d0cd2e-2178-4efb-8e56-906bfa61242a"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Look"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -748,24 +440,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Player_CrouchSlide = m_Player.FindAction("CrouchSlide", throwIfNotFound: true);
         m_Player_Focus = m_Player.FindAction("Focus", throwIfNotFound: true);
         m_Player_Punch = m_Player.FindAction("Punch", throwIfNotFound: true);
+        m_Player_SwitchMap = m_Player.FindAction("Switch Map", throwIfNotFound: true);
         // Knife
         m_Knife = asset.FindActionMap("Knife", throwIfNotFound: true);
-        m_Knife_Move = m_Knife.FindAction("Move", throwIfNotFound: true);
-        m_Knife_Look = m_Knife.FindAction("Look", throwIfNotFound: true);
-        m_Knife_Jump = m_Knife.FindAction("Jump", throwIfNotFound: true);
-        m_Knife_Run = m_Knife.FindAction("Run", throwIfNotFound: true);
-        m_Knife_CrouchSlide = m_Knife.FindAction("CrouchSlide", throwIfNotFound: true);
-        m_Knife_Focus = m_Knife.FindAction("Focus", throwIfNotFound: true);
         m_Knife_LightAttack = m_Knife.FindAction("LightAttack", throwIfNotFound: true);
         m_Knife_HeavyAttack = m_Knife.FindAction("HeavyAttack", throwIfNotFound: true);
         // Rifle
         m_Rifle = asset.FindActionMap("Rifle", throwIfNotFound: true);
-        m_Rifle_Move = m_Rifle.FindAction("Move", throwIfNotFound: true);
-        m_Rifle_Look = m_Rifle.FindAction("Look", throwIfNotFound: true);
-        m_Rifle_Jump = m_Rifle.FindAction("Jump", throwIfNotFound: true);
-        m_Rifle_Run = m_Rifle.FindAction("Run", throwIfNotFound: true);
-        m_Rifle_CrouchSlide = m_Rifle.FindAction("CrouchSlide", throwIfNotFound: true);
-        m_Rifle_Punch = m_Rifle.FindAction("Punch", throwIfNotFound: true);
         m_Rifle_ADS = m_Rifle.FindAction("ADS", throwIfNotFound: true);
         m_Rifle_Shoot = m_Rifle.FindAction("Shoot", throwIfNotFound: true);
         m_Rifle_Reload = m_Rifle.FindAction("Reload", throwIfNotFound: true);
@@ -837,6 +518,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_CrouchSlide;
     private readonly InputAction m_Player_Focus;
     private readonly InputAction m_Player_Punch;
+    private readonly InputAction m_Player_SwitchMap;
     public struct PlayerActions
     {
         private @PlayerInputs m_Wrapper;
@@ -848,6 +530,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @CrouchSlide => m_Wrapper.m_Player_CrouchSlide;
         public InputAction @Focus => m_Wrapper.m_Player_Focus;
         public InputAction @Punch => m_Wrapper.m_Player_Punch;
+        public InputAction @SwitchMap => m_Wrapper.m_Player_SwitchMap;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -878,6 +561,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Punch.started += instance.OnPunch;
             @Punch.performed += instance.OnPunch;
             @Punch.canceled += instance.OnPunch;
+            @SwitchMap.started += instance.OnSwitchMap;
+            @SwitchMap.performed += instance.OnSwitchMap;
+            @SwitchMap.canceled += instance.OnSwitchMap;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -903,6 +589,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Punch.started -= instance.OnPunch;
             @Punch.performed -= instance.OnPunch;
             @Punch.canceled -= instance.OnPunch;
+            @SwitchMap.started -= instance.OnSwitchMap;
+            @SwitchMap.performed -= instance.OnSwitchMap;
+            @SwitchMap.canceled -= instance.OnSwitchMap;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -924,24 +613,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     // Knife
     private readonly InputActionMap m_Knife;
     private List<IKnifeActions> m_KnifeActionsCallbackInterfaces = new List<IKnifeActions>();
-    private readonly InputAction m_Knife_Move;
-    private readonly InputAction m_Knife_Look;
-    private readonly InputAction m_Knife_Jump;
-    private readonly InputAction m_Knife_Run;
-    private readonly InputAction m_Knife_CrouchSlide;
-    private readonly InputAction m_Knife_Focus;
     private readonly InputAction m_Knife_LightAttack;
     private readonly InputAction m_Knife_HeavyAttack;
     public struct KnifeActions
     {
         private @PlayerInputs m_Wrapper;
         public KnifeActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Knife_Move;
-        public InputAction @Look => m_Wrapper.m_Knife_Look;
-        public InputAction @Jump => m_Wrapper.m_Knife_Jump;
-        public InputAction @Run => m_Wrapper.m_Knife_Run;
-        public InputAction @CrouchSlide => m_Wrapper.m_Knife_CrouchSlide;
-        public InputAction @Focus => m_Wrapper.m_Knife_Focus;
         public InputAction @LightAttack => m_Wrapper.m_Knife_LightAttack;
         public InputAction @HeavyAttack => m_Wrapper.m_Knife_HeavyAttack;
         public InputActionMap Get() { return m_Wrapper.m_Knife; }
@@ -953,24 +630,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_KnifeActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_KnifeActionsCallbackInterfaces.Add(instance);
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
-            @Run.started += instance.OnRun;
-            @Run.performed += instance.OnRun;
-            @Run.canceled += instance.OnRun;
-            @CrouchSlide.started += instance.OnCrouchSlide;
-            @CrouchSlide.performed += instance.OnCrouchSlide;
-            @CrouchSlide.canceled += instance.OnCrouchSlide;
-            @Focus.started += instance.OnFocus;
-            @Focus.performed += instance.OnFocus;
-            @Focus.canceled += instance.OnFocus;
             @LightAttack.started += instance.OnLightAttack;
             @LightAttack.performed += instance.OnLightAttack;
             @LightAttack.canceled += instance.OnLightAttack;
@@ -981,24 +640,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IKnifeActions instance)
         {
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
-            @Run.started -= instance.OnRun;
-            @Run.performed -= instance.OnRun;
-            @Run.canceled -= instance.OnRun;
-            @CrouchSlide.started -= instance.OnCrouchSlide;
-            @CrouchSlide.performed -= instance.OnCrouchSlide;
-            @CrouchSlide.canceled -= instance.OnCrouchSlide;
-            @Focus.started -= instance.OnFocus;
-            @Focus.performed -= instance.OnFocus;
-            @Focus.canceled -= instance.OnFocus;
             @LightAttack.started -= instance.OnLightAttack;
             @LightAttack.performed -= instance.OnLightAttack;
             @LightAttack.canceled -= instance.OnLightAttack;
@@ -1026,12 +667,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     // Rifle
     private readonly InputActionMap m_Rifle;
     private List<IRifleActions> m_RifleActionsCallbackInterfaces = new List<IRifleActions>();
-    private readonly InputAction m_Rifle_Move;
-    private readonly InputAction m_Rifle_Look;
-    private readonly InputAction m_Rifle_Jump;
-    private readonly InputAction m_Rifle_Run;
-    private readonly InputAction m_Rifle_CrouchSlide;
-    private readonly InputAction m_Rifle_Punch;
     private readonly InputAction m_Rifle_ADS;
     private readonly InputAction m_Rifle_Shoot;
     private readonly InputAction m_Rifle_Reload;
@@ -1039,12 +674,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     {
         private @PlayerInputs m_Wrapper;
         public RifleActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Rifle_Move;
-        public InputAction @Look => m_Wrapper.m_Rifle_Look;
-        public InputAction @Jump => m_Wrapper.m_Rifle_Jump;
-        public InputAction @Run => m_Wrapper.m_Rifle_Run;
-        public InputAction @CrouchSlide => m_Wrapper.m_Rifle_CrouchSlide;
-        public InputAction @Punch => m_Wrapper.m_Rifle_Punch;
         public InputAction @ADS => m_Wrapper.m_Rifle_ADS;
         public InputAction @Shoot => m_Wrapper.m_Rifle_Shoot;
         public InputAction @Reload => m_Wrapper.m_Rifle_Reload;
@@ -1057,24 +686,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_RifleActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_RifleActionsCallbackInterfaces.Add(instance);
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
-            @Jump.started += instance.OnJump;
-            @Jump.performed += instance.OnJump;
-            @Jump.canceled += instance.OnJump;
-            @Run.started += instance.OnRun;
-            @Run.performed += instance.OnRun;
-            @Run.canceled += instance.OnRun;
-            @CrouchSlide.started += instance.OnCrouchSlide;
-            @CrouchSlide.performed += instance.OnCrouchSlide;
-            @CrouchSlide.canceled += instance.OnCrouchSlide;
-            @Punch.started += instance.OnPunch;
-            @Punch.performed += instance.OnPunch;
-            @Punch.canceled += instance.OnPunch;
             @ADS.started += instance.OnADS;
             @ADS.performed += instance.OnADS;
             @ADS.canceled += instance.OnADS;
@@ -1088,24 +699,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IRifleActions instance)
         {
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
-            @Jump.started -= instance.OnJump;
-            @Jump.performed -= instance.OnJump;
-            @Jump.canceled -= instance.OnJump;
-            @Run.started -= instance.OnRun;
-            @Run.performed -= instance.OnRun;
-            @Run.canceled -= instance.OnRun;
-            @CrouchSlide.started -= instance.OnCrouchSlide;
-            @CrouchSlide.performed -= instance.OnCrouchSlide;
-            @CrouchSlide.canceled -= instance.OnCrouchSlide;
-            @Punch.started -= instance.OnPunch;
-            @Punch.performed -= instance.OnPunch;
-            @Punch.canceled -= instance.OnPunch;
             @ADS.started -= instance.OnADS;
             @ADS.performed -= instance.OnADS;
             @ADS.canceled -= instance.OnADS;
@@ -1141,26 +734,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnCrouchSlide(InputAction.CallbackContext context);
         void OnFocus(InputAction.CallbackContext context);
         void OnPunch(InputAction.CallbackContext context);
+        void OnSwitchMap(InputAction.CallbackContext context);
     }
     public interface IKnifeActions
     {
-        void OnMove(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
-        void OnRun(InputAction.CallbackContext context);
-        void OnCrouchSlide(InputAction.CallbackContext context);
-        void OnFocus(InputAction.CallbackContext context);
         void OnLightAttack(InputAction.CallbackContext context);
         void OnHeavyAttack(InputAction.CallbackContext context);
     }
     public interface IRifleActions
     {
-        void OnMove(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
-        void OnRun(InputAction.CallbackContext context);
-        void OnCrouchSlide(InputAction.CallbackContext context);
-        void OnPunch(InputAction.CallbackContext context);
         void OnADS(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnReload(InputAction.CallbackContext context);
