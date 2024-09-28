@@ -5,13 +5,13 @@ using UnityEngine.InputSystem;
 
 public class TestMoveScript : MonoBehaviour
 {
+    //assigning player controls
     private PlayerInputs playerInputs;
-
-    public InputActionMap Player;
+    private InputActionMap Player;
     private InputActionMap Knife;
     private InputActionMap Rifle;
-    
-    Rigidbody m_Rigidbody;
+    //movement and physics
+    public Rigidbody m_Rigidbody;
     public float moveSpeed = 10f;
 
     public string[] item = { "Unequipped", "Knife", "Rifle" };
@@ -22,17 +22,25 @@ public class TestMoveScript : MonoBehaviour
     }
     private void OnEnable()
     {
-        playerInputs.Disable();
-        playerInputs.Player.SwitchMap.performed += SwitchActionMap;
+        playerInputs.Enable();
+        playerInputs.Player.SwitchMap.performed += GetSwitchMap;
     }
 
     private void OnDisable()
     {
         playerInputs.Disable();
-        playerInputs.Player.SwitchMap.performed -= SwitchActionMap;
+        playerInputs.Player.SwitchMap.performed -= GetSwitchMap;
     }
 
-    private void SwitchActionMap(InputAction.CallbackContext context)
+    private void GetSwitchMap(InputAction.CallbackContext context)
+    {
+        float axisValue = playerInputs.Player.SwitchMap.ReadValue<float>();
+        axisValue = Mathf.Sin(axisValue);
+        
+        Debug.Log("Mousewheel: " + axisValue);
+    }
+
+    private void SwitchActionMap()
     {
         Player.Enable();
         Player.Disable();
@@ -56,6 +64,7 @@ public class TestMoveScript : MonoBehaviour
         Vector2 move = playerInputs.Player.Move.ReadValue<Vector2>();
         Debug.Log(move);
         playerInputs.Player.Jump.ReadValue<float>();
+        
         //if (playerInputs.Player.Jump.ReadValue<float>() == 1)
     }
 
